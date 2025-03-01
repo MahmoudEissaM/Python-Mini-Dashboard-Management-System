@@ -1,101 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Management CLI - README</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
-        h1, h2 { color: #333; }
-        code { background: #f4f4f4; padding: 2px 5px; border-radius: 5px; }
-        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; }
-        .container { max-width: 800px; margin: auto; }
-    </style>
-</head>
-<body>
+<h1>🖥️ Python Mini Dashboard Management System</h1>
 
-<div class="container">
-    <h1>📌 Project Management CLI</h1>
-    <p>A simple <strong>Python-based CLI application</strong> for managing projects, allowing users to <strong>register, sign in, create, edit, view, and delete projects</strong>.</p>
+<p>🚀 A simple yet powerful management system built with Python. This system allows users to register, log in, and manage projects efficiently.</p>
 
-    <h2>🚀 Features</h2>
-    <ul>
-        <li>✅ <strong>User Authentication</strong>: Register & log in with email and password validation.</li>
-        <li>✅ <strong>Project Management</strong>: Add, edit, delete, and view projects.</li>
-        <li>✅ <strong>Data Storage</strong>: JSON-based database.</li>
-        <li>✅ <strong>Input Validation</strong>: Strong password, email format, and date validation.</li>
-    </ul>
+<h2>📌 Features</h2>
+<ul>
+  <li>✅ <strong>User Authentication:</strong> Register and log in securely.</li>
+  <li>✅ <strong>Project Management:</strong> Create, edit, view, and delete projects.</li>
+  <li>✅ <strong>Data Persistence:</strong> All user and project data is stored in a JSON file.</li>
+  <li>✅ <strong>Validation:</strong> Email, phone, and password validation for secure user registration.</li>
+  <li>✅ <strong>Interactive CLI:</strong> User-friendly command-line interface.</li>
+</ul>
 
-    <h2>🛠 Technologies Used</h2>
-    <ul>
-        <li>Python 🐍</li>
-        <li>JSON (Data Storage)</li>
-        <li>Regex (Input Validation)</li>
-        <li>Datetime (Date Handling)</li>
-    </ul>
+<h2>🛠️ Installation & Setup</h2>
+<ol>
+  <li><strong>Clone the repository</strong></li>
+  <pre><code>git clone https://github.com/MahmoudEissaM/Python-Mini-Dashboard-Management-System.git</code></pre>
 
-    <h2>📥 Installation & Setup</h2>
-    <h3>1️⃣ Clone the Repository</h3>
-    <pre><code>git clone https://github.com/MahmoudEissaM/project-management-cli.git
-cd project-management-cli</code></pre>
+  <li><strong>Navigate to the project folder</strong></li>
+  <pre><code>cd Python-Mini-Dashboard-Management-System</code></pre>
 
-    <h3>2️⃣ Create a Virtual Environment (Optional)</h3>
-    <pre><code>python -m venv venv
-source venv/bin/activate  # On macOS/Linux
-venv\Scripts\activate     # On Windows</code></pre>
+  <li><strong>Run the program</strong></li>
+  <pre><code>python main.py</code></pre>
+</ol>
 
-    <h3>3️⃣ Install Dependencies</h3>
-    <pre><code>pip install -r requirements.txt</code></pre>
+<h2>📂 Project Structure</h2>
+<pre>
+📦 Python-Mini-Dashboard-Management-System
+│── 📂 users
+│   ├── login.py
+│   ├── register.py
+│── 📂 projects
+│   ├── project.py
+│── 📜 database.json  # Stores users & projects
+│── 📜 main.py        # Entry point
+│── 📜 helpers.py     # Utility functions
+│── 📜 README.md
+</pre>
 
-    <h3>4️⃣ Run the Application</h3>
-    <pre><code>python main.py</code></pre>
+<h2>📸 Screenshots</h2>
+<h3>🔹 User Registration & Login</h3>
+<pre>
+1. Register a new user
+2. Log in with your email and password
+</pre>
 
-    <h2>📌 Usage Guide</h2>
-    <p>Once you run the application, you will see:</p>
-    <pre><code>1. Sign In
-2. Register
-3. View Projects
-4. Add Project
-5. Edit Project
-6. Delete Project
-7. Exit</code></pre>
+<h3>🔹 Project Management</h3>
+<pre>
+1. View all available projects
+2. Add a new project with title, details, target amount, and dates
+3. Edit or delete your projects
+</pre>
 
-    <h2>📊 Project Data Structure</h2>
-    <h3>User Schema</h3>
-    <pre><code>{
-    "first_name": "John",
-    "last_name": "Doe",
-    "email": "john.doe@example.com",
-    "password": "hashed_password",
-    "phone": "+201234567890"
-}</code></pre>
+<h2>👨‍💻 Technologies Used</h2>
+<ul>
+  <li>🐍 Python</li>
+  <li>📄 JSON (for data storage)</li>
+  <li>🔧 Regular Expressions (for validation)</li>
+</ul>
 
-    <h3>Project Schema</h3>
-    <pre><code>{
-    "title": "AI Startup",
-    "details": "An AI-based recommendation system.",
-    "target": 50000,
-    "start_date": "2025-03-01",
-    "end_date": "2025-06-01",
-    "owner_email": "john.doe@example.com"
-}</code></pre>
+<h2>🤝 Contribution</h2>
+<p>Want to improve this project?</p>
+<ol>
+  <li>Fork the repo 🍴</li>
+  <li>Create a new branch 🌿</li>
+  <li>Commit your changes ✅</li>
+  <li>Open a Pull Request 🚀</li>
+</ol>
 
-    <h2>🔮 Future Enhancements</h2>
-    <ul>
-        <li>🚀 Encrypt passwords instead of storing them in plain text.</li>
-        <li>🚀 Convert CLI-based interaction into a Web or GUI-based application.</li>
-        <li>🚀 Move from JSON storage to PostgreSQL or MySQL.</li>
-        <li>🚀 Implement project search & filtering options.</li>
-    </ul>
+<h2>📞 Contact</h2>
+<p>👤 <strong>Mahmoud Eissa</strong></p>
+<p>📧 <a href="mailto:mahmoudessa8200@gmail.com">mahmoudessa8200@gmail.com</a></p>
+<p>🔗 <a href="https://github.com/MahmoudEissaM">GitHub</a></p>
 
-    <h2>👨‍💻 Author</h2>
-    <p><strong>Mahmoud Eissa</strong></p>
-    <p>🔗 <strong>GitHub</strong>: <a href="https://github.com/MahmoudEissaM" target="_blank">MahmoudEissaM</a></p>
-    <p>📧 <strong>Email</strong>: mahmoudessa8200@gmail.com</p>
-
-    <h2>📜 License</h2>
-    <p>This project is licensed under the <strong>MIT License</strong>.</p>
-</div>
-
-</body>
-</html>
+<hr>
+<p>⭐ <strong>If you like this project, don't forget to star it!</strong> ⭐</p>
